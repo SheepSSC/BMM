@@ -4992,7 +4992,7 @@ GameObject:
   - component: {fileID: 4281521404239643417}
   - component: {fileID: 4281521404239643412}
   m_Layer: 0
-  m_Name: Gun
+  m_Name: Gun ballon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

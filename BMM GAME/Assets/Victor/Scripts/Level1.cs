@@ -8,7 +8,7 @@ public class Level1 : MonoBehaviour
     public GameObject cam1;
     public GameObject cam2;
     public GameObject cam3;
-
+    public float timebtwnCam = 0.3f;
 
     // Start is called before the first frame update
     void Start()
@@ -26,12 +26,12 @@ public class Level1 : MonoBehaviour
 
         IEnumerator ExampleCoroutine()
         {
-            yield return new WaitForSeconds(.3f);
+            yield return new WaitForSeconds(timebtwnCam);
             cam1.SetActive(false);
-            yield return new WaitForSeconds(.3f);
+            yield return new WaitForSeconds(timebtwnCam);
 
             cam2.SetActive(false);
-            yield return new WaitForSeconds(.3f);
+            yield return new WaitForSeconds(timebtwnCam);
 
             
 

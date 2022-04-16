@@ -7,6 +7,8 @@ namespace StarterAssets
 {
 	public class StarterAssetsInputs : MonoBehaviour
 	{
+
+		public GameObject gun;
 		[Header("Character Input Values")]
 		public Vector2 move;
 		public Vector2 look;
@@ -40,6 +42,15 @@ namespace StarterAssets
 		{
 			JumpInput(value.isPressed);
 		}
+
+		public void OnShoot(InputValue value)
+		{
+
+			Debug.Log("pew");
+			gun.GetComponent<Shoot>().Shooting();
+		}
+
+
 
 		public void OnSprint(InputValue value)
 		{

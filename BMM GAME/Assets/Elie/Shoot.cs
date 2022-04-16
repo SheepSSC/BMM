@@ -20,18 +20,16 @@ public class Shoot : MonoBehaviour
 
     private void Update()
     {
-        if (!canShoot) return; // EXIT : Can't shoot;
+        
 
-        Shooting();
 
-        print(canShoot);
     }
 
-    private void Shooting()
+    public void Shooting()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        if (!canShoot) return; // EXIT : Can't shoot;
+
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, shootMask))
             {
                 Touched();
@@ -40,7 +38,7 @@ public class Shoot : MonoBehaviour
                 if (shootMode == ShootMode.ShootOnce)
                     canShoot = false;
             }
-        }
+        
     }
 
     private void SlowMotion()

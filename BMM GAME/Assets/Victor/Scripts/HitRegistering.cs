@@ -9,24 +9,30 @@ public class HitRegistering : MonoBehaviour
     private Animator m_Animator;
     private Rigidbody m_rb;
     public float pushPower;
+
+    private GameObject lvManager;
     // Start is called before the first frame update
     void Start()
     {
         m_Animator = daddy.GetComponent<Animator>();
         m_rb = GetComponent<Rigidbody>();
+        lvManager = GameObject.Find("LevelManager");
     }
 
 
     
 
             public void OnHit()
-    { 
+    {
+        Debug.Log("testo");
         Vector3 myPos = transform.position;
         Vector3 PlayerPos = Player.transform.position;
         print("touched");
         m_Animator.enabled = false;
 
         m_rb.AddForce((myPos - PlayerPos).normalized * pushPower);
+
+        lvManager.GetComponent<Level1>().win();
     }
 
     // Update is called once per frame

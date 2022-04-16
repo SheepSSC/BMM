@@ -20,9 +20,10 @@ namespace StarterAssets
 		[Header("Mouse Cursor Settings")]
 		public bool cursorLocked = true;
 		public bool cursorInputForLook = true;
-#endif
 
-		public GameObject gun;
+
+		public GameObject gun; 
+#endif
 
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
 		public void OnMove(InputValue value)
@@ -50,6 +51,7 @@ namespace StarterAssets
 
 		public void OnShoot(InputValue value)
 		{
+			Debug.Log("blablo");
 			gun.GetComponent<Shoot>().Shooting();
 		}
 #else

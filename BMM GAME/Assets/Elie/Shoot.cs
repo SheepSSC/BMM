@@ -12,11 +12,21 @@ public class Shoot : MonoBehaviour
     public ShootMode shootMode = ShootMode.ShootOnce;
     public float unscaledTimeShootCooldown = .5f;
 
+
+    private Animator myAnimator;
+
     //[Header("REFERENCES")]
 
     //public AudioSource music;
 
     private bool canShoot = true;
+
+
+    private void Awake()
+    {
+        myAnimator = GetComponent<Animator>();
+    }
+
 
     private void Update()
     {
@@ -28,6 +38,8 @@ public class Shoot : MonoBehaviour
     public void Shooting()
     {
         if (!canShoot) return; // EXIT : Can't shoot;
+
+        myAnimator.SetTrigger("Shoot");
 
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, shootMask))

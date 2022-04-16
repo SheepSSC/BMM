@@ -12,6 +12,10 @@ public class Shoot : MonoBehaviour
     public ShootMode shootMode = ShootMode.ShootOnce;
     public float unscaledTimeShootCooldown = .5f;
 
+    [Header("REFERENCES")]
+
+    public Transform canon;
+
     private Animator myAnimator;
 
     //[Header("REFERENCES")]
@@ -32,10 +36,8 @@ public class Shoot : MonoBehaviour
 
         myAnimator.SetTrigger("Shoot");
 
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, shootMask))
-            {
-            
+            if (Physics.Raycast(canon.position, canon.forward, out RaycastHit hit, shootMask))
+            {            
                 Touched(hit.transform.gameObject);
                 SlowMotion();
 

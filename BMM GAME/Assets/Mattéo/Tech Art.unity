@@ -2370,6 +2370,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   daddy: {fileID: 1125044239}
+  Player: {fileID: 0}
+  pushPower: 0
 --- !u!144 &1256335436
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -3455,6 +3457,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   daddy: {fileID: 1835909651}
+  Player: {fileID: 0}
+  pushPower: 0
 --- !u!144 &1745578305
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -3883,6 +3887,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   daddy: {fileID: 547830169}
+  Player: {fileID: 0}
+  pushPower: 0
 --- !u!1 &1835909651 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8654250720420973338, guid: 34115fd4eff069845a47d22ce756724e, type: 3}
@@ -5006,7 +5012,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7769029, y: 1}
+    m_SensorSize: {x: 1.776435, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0

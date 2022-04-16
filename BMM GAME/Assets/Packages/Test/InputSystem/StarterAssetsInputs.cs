@@ -7,8 +7,6 @@ namespace StarterAssets
 {
 	public class StarterAssetsInputs : MonoBehaviour
 	{
-
-		public GameObject gun;
 		[Header("Character Input Values")]
 		public Vector2 move;
 		public Vector2 look;
@@ -23,6 +21,8 @@ namespace StarterAssets
 		public bool cursorLocked = true;
 		public bool cursorInputForLook = true;
 #endif
+
+		public GameObject gun;
 
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
 		public void OnMove(InputValue value)
@@ -43,18 +43,14 @@ namespace StarterAssets
 			JumpInput(value.isPressed);
 		}
 
-		public void OnShoot(InputValue value)
-		{
-
-			Debug.Log("pew");
-			gun.GetComponent<Shoot>().Shooting();
-		}
-
-
-
 		public void OnSprint(InputValue value)
 		{
 			SprintInput(value.isPressed);
+		}
+
+		public void OnShoot(InputValue value)
+		{
+			gun.GetComponent<Shoot>().Shooting();
 		}
 #else
 	// old input sys if we do decide to have it (most likely wont)...

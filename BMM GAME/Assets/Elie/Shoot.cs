@@ -35,7 +35,8 @@ public class Shoot : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, shootMask))
             {
-                Touched();
+            
+                Touched(hit.transform.gameObject);
                 SlowMotion();
 
                 if (shootMode == ShootMode.ShootOnce)
@@ -86,8 +87,10 @@ public class Shoot : MonoBehaviour
         canShoot = true;
     }
 
-    private void Touched()
+    private void Touched(GameObject hit)
     {
         print("touched");
+        hit.GetComponent<HitRegistering>().OnHit();
+
     }
 }

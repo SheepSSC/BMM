@@ -4,19 +4,20 @@ using UnityEngine;
 
 public class HitRegistering : MonoBehaviour
 {
-
+    public GameObject daddy;
     private Animator m_Animator;
     // Start is called before the first frame update
     void Start()
     {
-        m_Animator = GetComponent<Animator>();
+        m_Animator = daddy.GetComponent<Animator>();
     }
 
 
     
 
-            public void OnDebugAction()
+            public void OnHit()
     {
+        print("touched");
         m_Animator.enabled = false;
     }
 

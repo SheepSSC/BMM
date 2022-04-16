@@ -6,10 +6,13 @@ public class CamFollow : MonoBehaviour
 {
 
     public Transform toFollow;
+
+    public float height;
+
     void LateUpdate()
     {
         Vector3 newPosition = toFollow.position;
-        newPosition.y = transform.position.y;
+        newPosition.y = height;
         transform.position = newPosition;
     }
 }

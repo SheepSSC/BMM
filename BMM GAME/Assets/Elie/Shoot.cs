@@ -12,7 +12,6 @@ public class Shoot : MonoBehaviour
     public ShootMode shootMode = ShootMode.ShootOnce;
     public float unscaledTimeShootCooldown = .5f;
 
-
     private Animator myAnimator;
 
     //[Header("REFERENCES")]
@@ -25,14 +24,6 @@ public class Shoot : MonoBehaviour
     private void Awake()
     {
         myAnimator = GetComponent<Animator>();
-    }
-
-
-    private void Update()
-    {
-        
-
-
     }
 
     public void Shooting()

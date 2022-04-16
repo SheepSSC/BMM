@@ -89,7 +89,7 @@ public class Shoot : MonoBehaviour
 
     private void Touched(GameObject hit)
     {
-        print("touched");
+        
         hit.GetComponent<HitRegistering>().OnHit();
 
     }

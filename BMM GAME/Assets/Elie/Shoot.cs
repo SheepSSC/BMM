@@ -16,6 +16,7 @@ public class Shoot : MonoBehaviour
 
     public Transform canon;
     public GameObject gunPos;
+    public LaserPointer pointer;
 
     private Animator myAnimator;
 
@@ -43,8 +44,11 @@ public class Shoot : MonoBehaviour
                 SlowMotion();
 
                 if (shootMode == ShootMode.ShootOnce)
+                {
                     canShoot = false;
+                    pointer.SetSightActive(canShoot);
             }
+        }
         
     }
 
@@ -59,6 +63,7 @@ public class Shoot : MonoBehaviour
         if (shootMode == ShootMode.ShootMultiple)
         {
             canShoot = false;
+            pointer.SetSightActive(canShoot);
             StartCoroutine(CooldownCoroutine());
         }
 
@@ -88,6 +93,7 @@ public class Shoot : MonoBehaviour
     {
         yield return new WaitForSecondsRealtime(unscaledTimeShootCooldown);
         canShoot = true;
+        pointer.SetSightActive(canShoot);
     }
 
     private void Touched(GameObject hit)

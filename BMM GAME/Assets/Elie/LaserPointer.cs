@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public class LaserPointer : MonoBehaviour
 {
     public LayerMask layerMask;
-    private LineRenderer lr;
+    public LineRenderer lr;
 
     // ======================================================================
     // MONOBEHAVIOUR
@@ -18,16 +18,15 @@ public class LaserPointer : MonoBehaviour
 
     private void Update()
     {
-        Vector3 fwd = transform.TransformVector(Vector3.forward);
+        lr.SetPosition(0, transform.position);
 
-        if (Physics.Raycast(transform.localPosition, fwd, out RaycastHit hit, layerMask))
+        if (Physics.Raycast(transform.position, transform.forward, out RaycastHit hit, layerMask))
         {
-            lr.enabled = true;
             lr.SetPosition(1, hit.point);
         }
         else
         {
-            lr.enabled = false;
+            lr.SetPosition(1, transform.forward * 50f);
         }
     }
 

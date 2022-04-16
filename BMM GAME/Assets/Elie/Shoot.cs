@@ -15,6 +15,7 @@ public class Shoot : MonoBehaviour
     [Header("REFERENCES")]
 
     public Transform canon;
+    public GameObject gunPos;
 
     private Animator myAnimator;
 
@@ -27,7 +28,7 @@ public class Shoot : MonoBehaviour
 
     private void Awake()
     {
-        myAnimator = GetComponent<Animator>();
+        myAnimator = gunPos.GetComponent<Animator>();
     }
 
     public void Shooting()

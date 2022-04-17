@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class TargetHandler : MonoBehaviour
 {
@@ -134,9 +135,6 @@ public class TargetHandler : MonoBehaviour
 
     private void Defeat()
     {
-        foreach (Target t in targets)
-        {
-            t.ResetTarget();
-        }
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

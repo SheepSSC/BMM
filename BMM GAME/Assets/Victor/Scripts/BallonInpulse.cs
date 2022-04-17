@@ -6,6 +6,7 @@ public class BallonInpulse : MonoBehaviour
 {
     private Rigidbody m_Rb;
     private GameObject gun;
+    public float force = 500;
     // Start is called before the first frame update
 
     private void Awake()
@@ -15,10 +16,16 @@ public class BallonInpulse : MonoBehaviour
     }
     void Start()
     {
-      
-        
 
-        m_Rb.AddForce(gun.transform.forward*500, ForceMode.Impulse);
+        Vector3 torque;
+
+
+        m_Rb.AddForce(gun.transform.forward*force, ForceMode.Impulse);
+        torque.x = Random.Range(-200, 200);
+        torque.y = Random.Range(-200, 200);
+        torque.z = Random.Range(-200, 200);
+
+        m_Rb.AddTorque ( torque ) ;
     }
 
 

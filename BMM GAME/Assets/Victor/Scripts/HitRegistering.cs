@@ -9,6 +9,7 @@ public class HitRegistering : MonoBehaviour
     private Animator m_Animator;
     private Rigidbody m_rb;
     public float pushPower;
+    public bool shotToWin = true;
 
     private GameObject lvManager;
     // Start is called before the first frame update
@@ -24,7 +25,10 @@ public class HitRegistering : MonoBehaviour
 
             public void OnHit()
     {
-        Debug.Log("testo");
+        if (shotToWin)
+        {
+            lvManager.GetComponent<Level1>().win();
+        }
         Vector3 myPos = transform.position;
         Vector3 PlayerPos = Player.transform.position;
         print("touched");
@@ -32,7 +36,7 @@ public class HitRegistering : MonoBehaviour
 
         m_rb.AddForce((myPos - PlayerPos).normalized * pushPower);
 
-        lvManager.GetComponent<Level1>().win();
+       
     }
 
     // Update is called once per frame

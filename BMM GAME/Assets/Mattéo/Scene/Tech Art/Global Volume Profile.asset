@@ -85,16 +85,16 @@ MonoBehaviour:
   active: 1
   postExposure:
     m_OverrideState: 1
-    m_Value: 4
+    m_Value: 0.1
   contrast:
     m_OverrideState: 1
-    m_Value: 88
+    m_Value: 8.14
   colorFilter:
     m_OverrideState: 0
     m_Value: {r: 0.16909933, g: 0.3773585, b: 0.23972376, a: 1}
   hueShift:
     m_OverrideState: 1
-    m_Value: -16
+    m_Value: 180
   saturation:
     m_OverrideState: 1
     m_Value: 51
@@ -116,7 +116,7 @@ MonoBehaviour:
     m_Value: 0.9
   intensity:
     m_OverrideState: 1
-    m_Value: 6.8
+    m_Value: 2
   scatter:
     m_OverrideState: 0
     m_Value: 0.7
@@ -165,7 +165,7 @@ MonoBehaviour:
     m_Value: {x: 0.5, y: 0.5}
   scale:
     m_OverrideState: 1
-    m_Value: 0.01
+    m_Value: 0.9
 --- !u!114 &5742682362639606413
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -265,7 +265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5485954d14dfb9a4c8ead8edb0ded5b1, type: 3}
   m_Name: LiftGammaGain
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   lift:
     m_OverrideState: 0
     m_Value: {x: 1, y: 1, z: 1, w: 0}
@@ -287,7 +287,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97c23e3b12dc18c42a140437e53d3951, type: 3}
   m_Name: Tonemapping
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   mode:
     m_OverrideState: 0
     m_Value: 0

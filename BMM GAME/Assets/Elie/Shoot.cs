@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using System.Collections.Generic;
 
 public class Shoot : MonoBehaviour
 {
@@ -17,6 +18,8 @@ public class Shoot : MonoBehaviour
     public Transform canon;
     public GameObject gunPos;
     public LaserPointer pointer;
+    public List<ParticleSystem> shootFX;
+    public GameObject disto;
 
     private Animator myAnimator;
 
@@ -38,18 +41,27 @@ public class Shoot : MonoBehaviour
 
         myAnimator.SetTrigger("Shoot");
 
-            if (Physics.Raycast(canon.position, canon.forward, out RaycastHit hit, shootMask))
-            {            
-                Touched(hit.transform.gameObject);
-                SlowMotion();
+        if (Physics.Raycast(canon.position, canon.forward, out RaycastHit hit, shootMask))
+        {
+            Touched(hit.transform.gameObject);
+            SlowMotion();
 
-                if (shootMode == ShootMode.ShootOnce)
-                {
-                    canShoot = false;
-                    pointer.SetSightActive(canShoot);
+            foreach (ParticleSystem ps in shootFX)
+            {
+                ps.gameObject.SetActive(false);
+                ps.gameObject.SetActive(true);
+                ps.Play();
+            }
+
+            disto.SetActive(false);
+            disto.SetActive(true);
+
+            if (shootMode == ShootMode.ShootOnce)
+            {
+                canShoot = false;
+                pointer.SetSightActive(canShoot);
             }
         }
-        
     }
 
     private void SlowMotion()

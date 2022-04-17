@@ -14,15 +14,17 @@ public class Level1 : MonoBehaviour
     public Image Crossfade;
     public string Scene_Name = "SceneX";
     public GameObject end;
+    public GameObject transition_out;
+    public GameObject transition_in;
 
     // Start is called before the first frame update
     void Start()
     {
-       Crossfade.CrossFadeAlpha(0, 2f, false);
+       //Crossfade.CrossFadeAlpha(0, 2f, false);
     }
     private void Update()
     {
-        
+        transition_in.SetActive(true);
     }
     public void win()
     {
@@ -45,9 +47,11 @@ public class Level1 : MonoBehaviour
             cam2.SetActive(false);
             yield return new WaitForSeconds(timebtwnCam);
 
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(0.4f);
             Crossfade.CrossFadeAlpha(1, 2.0f, false);
-            yield return new WaitForSeconds(3);
+            transition_out.SetActive(true);
+            yield return new WaitForSeconds(0.8f);
+            //transition.SetActive(false);
             SceneManager.LoadScene(Scene_Name);
             
         }

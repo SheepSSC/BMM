@@ -20,11 +20,11 @@ RenderSettings:
   m_FogDensity: 0.025
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.9386859, g: 0.90466136, b: 0.84687346, a: 1}
+  m_AmbientSkyColor: {r: 0.6037736, g: 0.59267884, b: 0.5718761, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 0
+  m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: aeab33f69c199e54794f516d31450ec4, type: 2}
   m_HaloStrength: 0.5
@@ -22369,6 +22369,7 @@ MonoBehaviour:
   daddy: {fileID: 1674868938}
   Player: {fileID: 1692868321}
   pushPower: 5000
+  shotToWin: 1
 --- !u!144 &687838030
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -33580,7 +33581,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 939655718}
-  m_LocalRotation: {x: 0.35756558, y: -0.10525091, z: 0.04059556, w: 0.9270497}
+  m_LocalRotation: {x: 0.35756558, y: -0.105250955, z: 0.040595576, w: 0.9270497}
   m_LocalPosition: {x: 0.53, y: 4.75, z: 16.48}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -37648,6 +37649,8 @@ MonoBehaviour:
   Crossfade: {fileID: 0}
   Scene_Name: SceneX
   end: {fileID: 1446919686}
+  transition: {fileID: 0}
+  transition_in: {fileID: 0}
 --- !u!1 &1062982568
 GameObject:
   m_ObjectHideFlags: 0

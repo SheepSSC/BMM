@@ -39,6 +39,12 @@ public class TargetHandler : MonoBehaviour
                 break;
             default:
                 break;
+
+        }
+
+        foreach (var a in currentList)
+        {
+            print(a);
         }
 
         // DONNER LA BONNE AFFICHE DEHORS
@@ -55,11 +61,11 @@ public class TargetHandler : MonoBehaviour
 
     public void CheckTargetOrder(int number)
     {
-        if(currentIndex == currentList[currentIndex]) // Bon numéro
+        if(number == currentList[currentIndex]) // Bon numéro
         {
             currentIndex++;
 
-            if(currentIndex == currentList.Count-1)
+            if(currentIndex == 4)
             {
                 Victory();
             }
@@ -69,6 +75,7 @@ public class TargetHandler : MonoBehaviour
             currentIndex = 0;
             Defeat();
         }
+            print(currentIndex);
     }
 
     // ======================================================================

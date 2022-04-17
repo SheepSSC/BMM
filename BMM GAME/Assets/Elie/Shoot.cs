@@ -98,8 +98,9 @@ public class Shoot : MonoBehaviour
 
     private void Touched(GameObject hit)
     {
-        
-        hit.GetComponent<HitRegistering>().OnHit();
-
+        if (hit.GetComponent<HitRegistering>())
+            hit.GetComponent<HitRegistering>().OnHit();
+        else if (hit.GetComponent<Target>())
+            hit.GetComponent<Target>().IsShooted(transform);
     }
 }

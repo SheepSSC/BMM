@@ -5,6 +5,7 @@ using System.Collections.Generic;
 public class TargetHandler : MonoBehaviour
 {
     public List<Target> targets;
+    public List<Transform> positions;
     List<int> anwser0 = new List<int> { 1, 5, 3, 2};
     List<int> anwser1 = new List<int> { 4, 5, 2, 3};
     List<int> anwser2 = new List<int> { 1, 3, 4, 5};
@@ -47,6 +48,23 @@ public class TargetHandler : MonoBehaviour
             print(a);
         }
 
+        int i = 0;
+
+        foreach (Target t in targets)
+        {
+            if(t.number == currentList[3])
+            {
+                t.transform.position = positions[0].position;
+                t.transform.rotation = positions[0].rotation;
+            }
+            else
+            {
+                i++;
+                t.transform.position = positions[i].position;
+                t.transform.rotation = positions[i].rotation;
+            }
+        }
+
         // DONNER LA BONNE AFFICHE DEHORS
     }
 
@@ -57,6 +75,7 @@ public class TargetHandler : MonoBehaviour
     public void AddToHandler(Target target)
     {
         targets.Add(target);
+        print("a " + target.number);
     }
 
     public void CheckTargetOrder(int number)

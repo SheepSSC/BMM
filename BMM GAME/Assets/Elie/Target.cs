@@ -9,7 +9,7 @@ public class Target : MonoBehaviour
     public TargetHandler handler;
     bool canBeShooted = true;
 
-    private void Start()
+    private void Awake()
     {
         handler.AddToHandler(this);
     }

@@ -39,7 +39,7 @@ Material:
     m_Ints: []
     m_Floats:
     - Vector1_28b5d8aab9ea43d0a2b2e3b14c9f001d: 1
-    - _Intensity: 2.11
+    - _Intensity: 2.41
     m_Colors:
     - Color_f52faee4bf9e4d64a808afbf841e2351: {r: 0.8627626, g: 1.3390695, b: 1.3962264, a: 1}
   m_BuildTextureStacks: []

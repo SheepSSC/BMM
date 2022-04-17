@@ -5,11 +5,29 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Victor/Scenes/Scene1.unity
-    guid: d7db0034dae46ba42b274072601f8e0b
+    path: Assets/Leo/Menu_Principal.unity
+    guid: 7a893aa20580d384ca91837d35fbcd71
   - enabled: 1
     path: Assets/Victor/Scenes/Playground.unity
     guid: 707acc8dffb72b144bb1ffbe1c965f3d
+  - enabled: 1
+    path: Assets/Victor/Scenes/Scene1.unity
+    guid: e723b7bbaeadf9d4f8e91e3eef0e25f0
+  - enabled: 1
+    path: Assets/Victor/Scenes/Scene2.unity
+    guid: f00b85d9809cc074da9f394749d1d116
+  - enabled: 1
+    path: Assets/Victor/Scenes/Scene3.unity
+    guid: 5c2ca29bd47aeee43b12f101a192bd26
+  - enabled: 1
+    path: Assets/Victor/Scenes/Scene4.unity
+    guid: e8c832664e53eea4a9d44d36c51e2409
+  - enabled: 1
+    path: Assets/Victor/Scenes/Scene Final.unity
+    guid: a81d3b9897a9a7444954dac26028c855
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 9e7be553448fa2546aea5752021cbcf7, type: 2}

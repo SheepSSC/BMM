@@ -23,13 +23,15 @@ public class LaserPointer : MonoBehaviour
 
         if (Physics.Raycast(transform.position, transform.forward, out RaycastHit hit, layerMask))
         {
+            lr.enabled = true;
             lr.SetPosition(1, hit.point);
             light.SetActive(true);
             light.transform.position = hit.point;
         }
         else
         {
-            lr.SetPosition(1, transform.forward * 50f);
+            lr.enabled = false;
+            //lr.SetPosition(1, (transform.forward) * 50f);
             light.SetActive(false);
         }
     }

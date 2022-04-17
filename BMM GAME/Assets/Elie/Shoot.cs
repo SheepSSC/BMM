@@ -102,5 +102,7 @@ public class Shoot : MonoBehaviour
             hit.GetComponent<HitRegistering>().OnHit();
         else if (hit.GetComponent<Target>())
             hit.GetComponent<Target>().IsShooted(transform);
+        else if (hit.GetComponent<End>())
+            hit.GetComponent<End>().TheEnd();
     }
 }

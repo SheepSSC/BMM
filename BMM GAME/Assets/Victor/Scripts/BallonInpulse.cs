@@ -7,6 +7,7 @@ public class BallonInpulse : MonoBehaviour
     private Rigidbody m_Rb;
     private GameObject gun;
     public float force = 500;
+    
     // Start is called before the first frame update
 
     private void Awake()
@@ -32,6 +33,7 @@ public class BallonInpulse : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         other.GetComponent<HitRegistering>().OnHit();
+
     }
     
 

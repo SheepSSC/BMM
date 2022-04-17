@@ -10,6 +10,8 @@ public class HitRegistering : MonoBehaviour
     private Rigidbody m_rb;
     public float pushPower;
     public bool shotToWin = true;
+    public bool cages = false;
+    public GameObject victoryfx;
 
     private GameObject lvManager;
     // Start is called before the first frame update
@@ -28,6 +30,11 @@ public class HitRegistering : MonoBehaviour
         if (shotToWin)
         {
             lvManager.GetComponent<Level1>().win();
+        }
+
+        if (cages)
+        {
+            victoryfx.SetActive(true);
         }
         Vector3 myPos = transform.position;
         Vector3 PlayerPos = Player.transform.position;

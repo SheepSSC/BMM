@@ -52,7 +52,16 @@ namespace StarterAssets
 		public void OnShoot(InputValue value)
 		{
 			Debug.Log("blablo");
-			gun.GetComponent<Shoot>().Shooting();
+            if(gun.GetComponent<ShootBallon>())
+			{
+				gun.GetComponent<ShootBallon>().Shooting();
+			}
+
+			if (gun.GetComponent<Shoot>())
+			{
+				gun.GetComponent<Shoot>().Shooting();
+			}
+
 		}
 #else
 	// old input sys if we do decide to have it (most likely wont)...

@@ -13,6 +13,7 @@ public class Level1 : MonoBehaviour
     public float timebtwnCam = 0.3f;
     public Image Crossfade;
     public string Scene_Name = "SceneX";
+    public GameObject end;
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +26,13 @@ public class Level1 : MonoBehaviour
     }
     public void win()
     {
+        if (end)
+        {
+            end.SetActive(true);
+            Time.timeScale = 0;
+            return;
+        }
+
         StartCoroutine(ExampleCoroutine());
 
 

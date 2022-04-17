@@ -37645,7 +37645,9 @@ MonoBehaviour:
   cam2: {fileID: 774383060}
   cam3: {fileID: 939655718}
   timebtwnCam: 0.3
-  endCanvas: {fileID: 1446919686}
+  Crossfade: {fileID: 0}
+  Scene_Name: SceneX
+  end: {fileID: 1446919686}
 --- !u!1 &1062982568
 GameObject:
   m_ObjectHideFlags: 0

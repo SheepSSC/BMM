@@ -44,7 +44,7 @@
                 {
                     "name": "Shoot",
                     "type": "Button",
-                    "id": "6693250f-4a93-47f9-a3bb-904bb3a433c7",
+                    "id": "dfdc2e16-b7f7-44ea-8438-75e9f1c0d0dc",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -230,7 +230,7 @@
                 },
                 {
                     "name": "",
-                    "id": "4584b6c0-93c6-4261-8b5f-63082e1e6d0e",
+                    "id": "227f5fd8-b1e7-4065-a264-878f0596b582",
                     "path": "<Mouse>/leftButton",
                     "interactions": "Press",
                     "processors": "",
@@ -241,11 +241,11 @@
                 },
                 {
                     "name": "",
-                    "id": "b0f488e3-2e25-48e8-8d4f-cb6c7cc146aa",
+                    "id": "83011ca3-7de9-456c-9789-29546bdffee9",
                     "path": "<Gamepad>/rightTrigger",
                     "interactions": "Press",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Gamepad",
                     "action": "Shoot",
                     "isComposite": false,
                     "isPartOfComposite": false

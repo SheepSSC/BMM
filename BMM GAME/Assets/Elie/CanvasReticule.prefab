@@ -113,6 +113,7 @@ GameObject:
   - component: {fileID: 1251723304787454363}
   - component: {fileID: 1251723304787454340}
   - component: {fileID: 1251723304787454341}
+  - component: {fileID: 2305915870877387704}
   m_Layer: 5
   m_Name: Reticule
   m_TagString: Untagged
@@ -138,7 +139,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -412, y: -430.625}
-  m_SizeDelta: {x: 10, y: 10}
+  m_SizeDelta: {x: 5, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1251723304787454363
 CanvasRenderer:
@@ -190,3 +191,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29924ab023bad514ab290d1fda0ca404, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &2305915870877387704
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1251723304787454343}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7767e7023dba1b346afd29a0dfa5fdf8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

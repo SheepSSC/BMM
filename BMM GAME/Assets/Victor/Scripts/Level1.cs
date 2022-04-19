@@ -20,7 +20,8 @@ public class Level1 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       //Crossfade.CrossFadeAlpha(0, 2f, false);
+        Cursor.visible = false;
+        //Crossfade.CrossFadeAlpha(0, 2f, false);
     }
     private void Update()
     {

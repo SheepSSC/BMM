@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 8900000, guid: 619e305f5165a9946b7f72464e44ca4a, type: 3}
   m_Sun: {fileID: 2114283754330233425}
-  m_IndirectSpecularColor: {r: 0.6321356, g: 0.87369376, b: 0.9915845, a: 1}
+  m_IndirectSpecularColor: {r: 0.5721469, g: 0.786348, b: 0.91000706, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -44314,6 +44314,8 @@ MonoBehaviour:
   Player: {fileID: 1416459597}
   pushPower: 10000
   shotToWin: 1
+  cages: 0
+  victoryfx: {fileID: 0}
 --- !u!144 &687838030
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -48912,7 +48914,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.2181304, y: 1}
+    m_SensorSize: {x: 1.4749569, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -48928,7 +48930,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 774383060}
-  m_LocalRotation: {x: -0.1303423, y: -0.034090985, z: -0.0044844276, w: 0.9908727}
+  m_LocalRotation: {x: -0.13034229, y: -0.034091022, z: -0.0044844327, w: 0.9908727}
   m_LocalPosition: {x: 32.9, y: 31.8, z: 13.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -60556,7 +60558,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.2181304, y: 1}
+    m_SensorSize: {x: 1.4749569, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -60572,7 +60574,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 939655718}
-  m_LocalRotation: {x: 0.32924515, y: 0.4582716, z: -0.18767396, w: 0.80396724}
+  m_LocalRotation: {x: 0.32924518, y: 0.4582716, z: -0.18767393, w: 0.80396724}
   m_LocalPosition: {x: 0.08, y: 75.32, z: 26.72}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -67101,10 +67103,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: CanvasReticule
       objectReference: {fileID: 0}
-    - target: {fileID: 1251723304072819991, guid: 3dd2abd7281eed34ca5854a95dac44a0, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1251723304072820011, guid: 3dd2abd7281eed34ca5854a95dac44a0, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -67188,14 +67186,6 @@ PrefabInstance:
     - target: {fileID: 1251723304072820011, guid: 3dd2abd7281eed34ca5854a95dac44a0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1251723304787454342, guid: 3dd2abd7281eed34ca5854a95dac44a0, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1251723304787454342, guid: 3dd2abd7281eed34ca5854a95dac44a0, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3dd2abd7281eed34ca5854a95dac44a0, type: 3}

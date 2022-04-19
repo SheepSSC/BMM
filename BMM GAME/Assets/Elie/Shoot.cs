@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class Shoot : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class Shoot : MonoBehaviour
     public enum ShootMode { ShootOnce, ShootMultiple}
     public ShootMode shootMode = ShootMode.ShootOnce;
     public float unscaledTimeShootCooldown = .5f;
+    public Transform cam;
 
     [Header("REFERENCES")]
 
@@ -20,7 +22,7 @@ public class Shoot : MonoBehaviour
     public LaserPointer pointer;
     public List<ParticleSystem> shootFX;
     public GameObject disto;
-
+    private GameObject reticule;
     private Animator myAnimator;
 
     //[Header("REFERENCES")]
@@ -33,18 +35,40 @@ public class Shoot : MonoBehaviour
     private void Awake()
     {
         myAnimator = gunPos.GetComponent<Animator>();
-    }
+        cam = GameObject.Find("MainCamera").transform;
+        reticule = GameObject.Find("Reticule");
+        shootMask = LayerMask.GetMask("Mind");
 
+    }
+    private void Update()
+    {
+     
+
+        if (Physics.Raycast(cam.position, cam.forward, out RaycastHit hit,1000000, shootMask))
+        {
+           GameObject objectHit =  hit.transform.transform.gameObject;
+
+            gunPos.transform.LookAt(hit.point);
+            reticule.GetComponent<Animator>().SetBool("Aim", true);
+
+        }
+        else
+        {
+          
+            reticule.GetComponent<Animator>().SetBool("Aim", false);
+        }
+    }
     public void Shooting()
     {
         if (!canShoot) return; // EXIT : Can't shoot;
 
         myAnimator.SetTrigger("Shoot");
 
-        if (Physics.Raycast(canon.position, canon.forward, out RaycastHit hit, shootMask))
+        if (Physics.Raycast(cam.position, cam.forward, out RaycastHit hit, 1000000, shootMask))
         {
             Touched(hit.transform.gameObject);
             SlowMotion();
+            reticule.SetActive(false);
 
             foreach (ParticleSystem ps in shootFX)
             {
